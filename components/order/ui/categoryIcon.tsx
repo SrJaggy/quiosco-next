@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image"
 import { Category } from "@/src/generated/prisma/client"
 import Link from "next/link"
+import { useParams } from "next/navigation"
 
 
 type CategoryIconProps = {
@@ -8,9 +10,11 @@ type CategoryIconProps = {
 }
 
 
+
 export default function categoryIcon({category}: CategoryIconProps) {
+  const params = useParams<{category:string}>()
   return (
-    <div className={`flex items-center gap-4 w-full border-t border-gray-200 p-3 last-of-type:border-b`}>
+    <div className={`${category.slug === params.category ? 'bg-amber-400' : ''} flex items-center gap-4 w-full border-t border-gray-200 p-3 last-of-type:border-b`}>
 
       <div className="relative size-16">
         <Image 
