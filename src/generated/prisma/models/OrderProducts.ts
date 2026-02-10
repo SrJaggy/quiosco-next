@@ -30,30 +30,35 @@ export type OrderProductsAvgAggregateOutputType = {
   id: number | null
   orderId: number | null
   productId: number | null
+  quantity: number | null
 }
 
 export type OrderProductsSumAggregateOutputType = {
   id: number | null
   orderId: number | null
   productId: number | null
+  quantity: number | null
 }
 
 export type OrderProductsMinAggregateOutputType = {
   id: number | null
   orderId: number | null
   productId: number | null
+  quantity: number | null
 }
 
 export type OrderProductsMaxAggregateOutputType = {
   id: number | null
   orderId: number | null
   productId: number | null
+  quantity: number | null
 }
 
 export type OrderProductsCountAggregateOutputType = {
   id: number
   orderId: number
   productId: number
+  quantity: number
   _all: number
 }
 
@@ -62,30 +67,35 @@ export type OrderProductsAvgAggregateInputType = {
   id?: true
   orderId?: true
   productId?: true
+  quantity?: true
 }
 
 export type OrderProductsSumAggregateInputType = {
   id?: true
   orderId?: true
   productId?: true
+  quantity?: true
 }
 
 export type OrderProductsMinAggregateInputType = {
   id?: true
   orderId?: true
   productId?: true
+  quantity?: true
 }
 
 export type OrderProductsMaxAggregateInputType = {
   id?: true
   orderId?: true
   productId?: true
+  quantity?: true
 }
 
 export type OrderProductsCountAggregateInputType = {
   id?: true
   orderId?: true
   productId?: true
+  quantity?: true
   _all?: true
 }
 
@@ -179,6 +189,7 @@ export type OrderProductsGroupByOutputType = {
   id: number
   orderId: number
   productId: number
+  quantity: number
   _count: OrderProductsCountAggregateOutputType | null
   _avg: OrderProductsAvgAggregateOutputType | null
   _sum: OrderProductsSumAggregateOutputType | null
@@ -208,6 +219,7 @@ export type OrderProductsWhereInput = {
   id?: Prisma.IntFilter<"OrderProducts"> | number
   orderId?: Prisma.IntFilter<"OrderProducts"> | number
   productId?: Prisma.IntFilter<"OrderProducts"> | number
+  quantity?: Prisma.IntFilter<"OrderProducts"> | number
   order?: Prisma.XOR<Prisma.OrderScalarRelationFilter, Prisma.OrderWhereInput>
   product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.ProductWhereInput>
 }
@@ -216,6 +228,7 @@ export type OrderProductsOrderByWithRelationInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
   order?: Prisma.OrderOrderByWithRelationInput
   product?: Prisma.ProductOrderByWithRelationInput
 }
@@ -227,6 +240,7 @@ export type OrderProductsWhereUniqueInput = Prisma.AtLeast<{
   NOT?: Prisma.OrderProductsWhereInput | Prisma.OrderProductsWhereInput[]
   orderId?: Prisma.IntFilter<"OrderProducts"> | number
   productId?: Prisma.IntFilter<"OrderProducts"> | number
+  quantity?: Prisma.IntFilter<"OrderProducts"> | number
   order?: Prisma.XOR<Prisma.OrderScalarRelationFilter, Prisma.OrderWhereInput>
   product?: Prisma.XOR<Prisma.ProductScalarRelationFilter, Prisma.ProductWhereInput>
 }, "id">
@@ -235,6 +249,7 @@ export type OrderProductsOrderByWithAggregationInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
   _count?: Prisma.OrderProductsCountOrderByAggregateInput
   _avg?: Prisma.OrderProductsAvgOrderByAggregateInput
   _max?: Prisma.OrderProductsMaxOrderByAggregateInput
@@ -249,9 +264,11 @@ export type OrderProductsScalarWhereWithAggregatesInput = {
   id?: Prisma.IntWithAggregatesFilter<"OrderProducts"> | number
   orderId?: Prisma.IntWithAggregatesFilter<"OrderProducts"> | number
   productId?: Prisma.IntWithAggregatesFilter<"OrderProducts"> | number
+  quantity?: Prisma.IntWithAggregatesFilter<"OrderProducts"> | number
 }
 
 export type OrderProductsCreateInput = {
+  quantity: number
   order: Prisma.OrderCreateNestedOneWithoutOrderProductsInput
   product: Prisma.ProductCreateNestedOneWithoutOrderItemsInput
 }
@@ -260,9 +277,11 @@ export type OrderProductsUncheckedCreateInput = {
   id?: number
   orderId: number
   productId: number
+  quantity: number
 }
 
 export type OrderProductsUpdateInput = {
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
   order?: Prisma.OrderUpdateOneRequiredWithoutOrderProductsNestedInput
   product?: Prisma.ProductUpdateOneRequiredWithoutOrderItemsNestedInput
 }
@@ -271,22 +290,25 @@ export type OrderProductsUncheckedUpdateInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   orderId?: Prisma.IntFieldUpdateOperationsInput | number
   productId?: Prisma.IntFieldUpdateOperationsInput | number
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type OrderProductsCreateManyInput = {
   id?: number
   orderId: number
   productId: number
+  quantity: number
 }
 
 export type OrderProductsUpdateManyMutationInput = {
-
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type OrderProductsUncheckedUpdateManyInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   orderId?: Prisma.IntFieldUpdateOperationsInput | number
   productId?: Prisma.IntFieldUpdateOperationsInput | number
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type OrderProductsListRelationFilter = {
@@ -303,30 +325,35 @@ export type OrderProductsCountOrderByAggregateInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
 }
 
 export type OrderProductsAvgOrderByAggregateInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
 }
 
 export type OrderProductsMaxOrderByAggregateInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
 }
 
 export type OrderProductsMinOrderByAggregateInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
 }
 
 export type OrderProductsSumOrderByAggregateInput = {
   id?: Prisma.SortOrder
   orderId?: Prisma.SortOrder
   productId?: Prisma.SortOrder
+  quantity?: Prisma.SortOrder
 }
 
 export type OrderProductsCreateNestedManyWithoutProductInput = {
@@ -414,12 +441,14 @@ export type OrderProductsUncheckedUpdateManyWithoutOrderNestedInput = {
 }
 
 export type OrderProductsCreateWithoutProductInput = {
+  quantity: number
   order: Prisma.OrderCreateNestedOneWithoutOrderProductsInput
 }
 
 export type OrderProductsUncheckedCreateWithoutProductInput = {
   id?: number
   orderId: number
+  quantity: number
 }
 
 export type OrderProductsCreateOrConnectWithoutProductInput = {
@@ -455,15 +484,18 @@ export type OrderProductsScalarWhereInput = {
   id?: Prisma.IntFilter<"OrderProducts"> | number
   orderId?: Prisma.IntFilter<"OrderProducts"> | number
   productId?: Prisma.IntFilter<"OrderProducts"> | number
+  quantity?: Prisma.IntFilter<"OrderProducts"> | number
 }
 
 export type OrderProductsCreateWithoutOrderInput = {
+  quantity: number
   product: Prisma.ProductCreateNestedOneWithoutOrderItemsInput
 }
 
 export type OrderProductsUncheckedCreateWithoutOrderInput = {
   id?: number
   productId: number
+  quantity: number
 }
 
 export type OrderProductsCreateOrConnectWithoutOrderInput = {
@@ -495,39 +527,47 @@ export type OrderProductsUpdateManyWithWhereWithoutOrderInput = {
 export type OrderProductsCreateManyProductInput = {
   id?: number
   orderId: number
+  quantity: number
 }
 
 export type OrderProductsUpdateWithoutProductInput = {
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
   order?: Prisma.OrderUpdateOneRequiredWithoutOrderProductsNestedInput
 }
 
 export type OrderProductsUncheckedUpdateWithoutProductInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   orderId?: Prisma.IntFieldUpdateOperationsInput | number
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type OrderProductsUncheckedUpdateManyWithoutProductInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   orderId?: Prisma.IntFieldUpdateOperationsInput | number
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type OrderProductsCreateManyOrderInput = {
   id?: number
   productId: number
+  quantity: number
 }
 
 export type OrderProductsUpdateWithoutOrderInput = {
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
   product?: Prisma.ProductUpdateOneRequiredWithoutOrderItemsNestedInput
 }
 
 export type OrderProductsUncheckedUpdateWithoutOrderInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productId?: Prisma.IntFieldUpdateOperationsInput | number
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 export type OrderProductsUncheckedUpdateManyWithoutOrderInput = {
   id?: Prisma.IntFieldUpdateOperationsInput | number
   productId?: Prisma.IntFieldUpdateOperationsInput | number
+  quantity?: Prisma.IntFieldUpdateOperationsInput | number
 }
 
 
@@ -536,6 +576,7 @@ export type OrderProductsSelect<ExtArgs extends runtime.Types.Extensions.Interna
   id?: boolean
   orderId?: boolean
   productId?: boolean
+  quantity?: boolean
   order?: boolean | Prisma.OrderDefaultArgs<ExtArgs>
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["orderProducts"]>
@@ -544,6 +585,7 @@ export type OrderProductsSelectCreateManyAndReturn<ExtArgs extends runtime.Types
   id?: boolean
   orderId?: boolean
   productId?: boolean
+  quantity?: boolean
   order?: boolean | Prisma.OrderDefaultArgs<ExtArgs>
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["orderProducts"]>
@@ -552,6 +594,7 @@ export type OrderProductsSelectUpdateManyAndReturn<ExtArgs extends runtime.Types
   id?: boolean
   orderId?: boolean
   productId?: boolean
+  quantity?: boolean
   order?: boolean | Prisma.OrderDefaultArgs<ExtArgs>
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
 }, ExtArgs["result"]["orderProducts"]>
@@ -560,9 +603,10 @@ export type OrderProductsSelectScalar = {
   id?: boolean
   orderId?: boolean
   productId?: boolean
+  quantity?: boolean
 }
 
-export type OrderProductsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "orderId" | "productId", ExtArgs["result"]["orderProducts"]>
+export type OrderProductsOmit<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = runtime.Types.Extensions.GetOmit<"id" | "orderId" | "productId" | "quantity", ExtArgs["result"]["orderProducts"]>
 export type OrderProductsInclude<ExtArgs extends runtime.Types.Extensions.InternalArgs = runtime.Types.Extensions.DefaultArgs> = {
   order?: boolean | Prisma.OrderDefaultArgs<ExtArgs>
   product?: boolean | Prisma.ProductDefaultArgs<ExtArgs>
@@ -586,6 +630,7 @@ export type $OrderProductsPayload<ExtArgs extends runtime.Types.Extensions.Inter
     id: number
     orderId: number
     productId: number
+    quantity: number
   }, ExtArgs["result"]["orderProducts"]>
   composites: {}
 }
@@ -1014,6 +1059,7 @@ export interface OrderProductsFieldRefs {
   readonly id: Prisma.FieldRef<"OrderProducts", 'Int'>
   readonly orderId: Prisma.FieldRef<"OrderProducts", 'Int'>
   readonly productId: Prisma.FieldRef<"OrderProducts", 'Int'>
+  readonly quantity: Prisma.FieldRef<"OrderProducts", 'Int'>
 }
     
 
