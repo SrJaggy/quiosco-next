@@ -23,7 +23,7 @@ const config: runtime.GetPrismaClientConfig = {
       "value": "prisma-client"
     },
     "output": {
-      "value": "D:\\cursos-generales\\Ingenieria de Software\\otros cursos\\react-la-guia-completa\\quiosco-next\\src\\generated\\prisma",
+      "value": "C:\\PROYECTOS JULIAN\\React la guia completa\\quiosco-next\\src\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -37,7 +37,7 @@ const config: runtime.GetPrismaClientConfig = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "D:\\cursos-generales\\Ingenieria de Software\\otros cursos\\react-la-guia-completa\\quiosco-next\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\PROYECTOS JULIAN\\React la guia completa\\quiosco-next\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativePath": "../../../prisma",
@@ -47,6 +47,7 @@ const config: runtime.GetPrismaClientConfig = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
